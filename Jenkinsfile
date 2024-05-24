@@ -7,16 +7,10 @@ pipeline {
                 sh 'npm install'
             }
         }
-        stage('Build') {
-            steps {
-                echo 'Building..'
-                sh 'ng build'
-            }
-        }
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                sh 'npm start'
+                sh 'ng serve --host 0.0.0.0 --port 4300'
             }
         }
     }
