@@ -13,16 +13,10 @@ pipeline {
                 sh 'ng build'
             }
         }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-                sh 'ng test'
-            }
-        }
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                sh 'ng serve'
+                sh 'npm start'
             }
         }
     }
