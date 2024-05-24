@@ -10,7 +10,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                sh 'ng serve --host 0.0.0.0 --port 4300'
+                sh 'ng serve --port 4300'
             }
         }
     }
