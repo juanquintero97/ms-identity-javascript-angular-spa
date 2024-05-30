@@ -1,0 +1,16 @@
+<project>
+  <buildType id="Build">
+    <name>Build and Deploy Angular App</name>
+    <steps>
+      <!-- Install Dependencies -->
+      <step name="Install Dependencies" type="npm">
+        <param name="command" value="install"/>
+      </step>
+     
+      <!-- Deploy Application -->
+      <step name="Deploy" type="npm">
+        <param name="command" value="start"/>
+      </step>
+    </steps>
+  </buildType>
+</project>
